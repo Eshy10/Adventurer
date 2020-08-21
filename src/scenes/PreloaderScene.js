@@ -4,10 +4,15 @@ export default class PreloaderScene extends Phaser.Scene {
   constructor () {
     super('Preloader');
   }
+
+  init () {
+    this.readyCount = 0;
+  }
+   
  
   preload () {
    // add logo image
-   this.add.image(400, 200, 'logo');
+   this.add.image(600, 150, 'logo');
  
    // display progress bar
    var progressBar = this.add.graphics();
@@ -84,18 +89,12 @@ export default class PreloaderScene extends Phaser.Scene {
    this.load.audio('bgMusic', ['assets/TownTheme.ogg']);
   }
 
-init () {
-  this.readyCount = 0;
-}
- 
 ready () {
+ this.scene.start('Title');
   this.readyCount++;
   if (this.readyCount === 2) {
     this.scene.start('Title');
   }
 }
  
-  create () {
-
-  }
 };

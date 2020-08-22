@@ -9,6 +9,12 @@ export default class OptionsScene extends Phaser.Scene {
 
   create () {
 
+let image = this.add.image(this.cameras.main.width / 2, this.cameras.main.height / 2, 'bgImage')
+let scaleX = this.cameras.main.width / image.width
+let scaleY = this.cameras.main.height / image.height
+let scale = Math.max(scaleX, scaleY)
+image.setScale(scale).setScrollFactor(0)
+
     this.model = this.sys.game.globals.model;
     
     this.text = this.add.text(300, 100, 'Options', { fontSize: 40 });

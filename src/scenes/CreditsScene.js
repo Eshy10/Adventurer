@@ -8,6 +8,12 @@ export default class CreditsScene extends Phaser.Scene {
  
 
   create () {
+    // Background
+    let image = this.add.image(this.cameras.main.width / 2, this.cameras.main.height / 2, 'bgImage')
+    let scaleX = this.cameras.main.width / image.width
+    let scaleY = this.cameras.main.height / image.height
+    let scale = Math.max(scaleX, scaleY)
+    image.setScale(scale).setScrollFactor(0)
     this.creditsText = this.add.text(0, 0, 'Credits', { fontSize: '32px', fill: '#fff' });
     this.madeByText = this.add.text(0, 0, 'Created By: Eshy Shola', { fontSize: '26px', fill: '#fff' });
     this.zone = this.add.zone(config.width/2, config.height/2, config.width, config.height);

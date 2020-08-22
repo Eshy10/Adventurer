@@ -1,9 +1,9 @@
 import 'phaser';
-import PlayerContainer from '../Classes/player/PlayerContainer';
-import Chest from '../Classes/Chest';
-import Monster from '../Classes/Monster';
-import Map from '../Classes/Map';
-import GameManager from '../GameManager/gameManager';
+import PlayerContainer from '../classes/player/PlayerContainer';
+import Chest from '../classes/Chest';
+import Monster from '../classes/Monster';
+import Map from '../classes/Map';
+import GameManager from '../gameManager/GameManger';
  
 export default class GameScene extends Phaser.Scene {
   constructor () {

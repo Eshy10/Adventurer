@@ -1,4 +1,6 @@
-class UiScene extends Phaser.Scene {
+import Phaser from 'phaser';
+
+export default class UiScene extends Phaser.Scene {
     constructor() {
       super('Ui');
     }

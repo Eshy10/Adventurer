@@ -113,7 +113,7 @@ export default class GameManager {
     setupSpawners() {
       const config = {
         spawnInterval: 1000,
-        limit: 10,
+        limit: 20,
         spawnerType: SpawnerType.CHEST,
         id: '',
       };

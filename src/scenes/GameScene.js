@@ -3,7 +3,7 @@ import PlayerContainer from '../Classes/player/PlayerContainer';
 import Chest from '../Classes/Chest';
 import Monster from '../Classes/Monster';
 import Map from '../Classes/Map';
-import GameManager from '../GameManager/GameManager';
+import GameManager from '../GameManager/gameManager';
  
 export default class GameScene extends Phaser.Scene {
   constructor () {

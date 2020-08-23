@@ -48,6 +48,10 @@ module.exports = {
         test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
         loader: 'url-loader',
       },
+      {
+        test: /\.(mp3|ogg|wav)$/,
+        loader: 'file-loader',
+      },
     ],
   },
 };

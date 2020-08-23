@@ -2,7 +2,7 @@ import { v4 as uuidv4 } from 'uuid';
 
 export default class PlayerModel {
     constructor(spawnLocations) {
-      this.health = 2;
+      this.health = 10;
       this.maxHealth = 10;
       this.gold = 0;
       this.id = `player-${uuidv4()}`;

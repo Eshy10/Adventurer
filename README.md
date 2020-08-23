@@ -9,15 +9,16 @@
 - Day3: Game initial template setup was gotten Zenva Academy. it was modify to add extra features to enhance the game.
 - Day4: The game logic is made up of the following:
 - The warrior who is the player of the game appear at different locations of the gamescene at the start of a new game.
+- There are blocked layers more like obstacles so the player does not move freely in the tilemap or background just increase the complexity.
 - The monsters and the treasure box spawn at different location of the game.
 - The warrior must collect the treasure box to get more gold.
 - The warrior get more health bar and gold by fighting the monsters with his sword. The sword can be gotten by pressing the spacebar of your keyboard.
 - The warrior must be quick to fight the monsters so that he doesn't lose his healthbar.
-- The game is over if the warrior healthbar is empty
+- The game is over if the warrior healthbar is empty.
 
 ## Instructions
-- After the loading sceen, a sceen appears with the buttons. You click on options to disable sound and music. To get started click on play.
-- When you click on play you will be taken to a screen with instructions on how to play and make sure you enter your name and click on play button to get started.
+- After the loading sceen, a sceen appears with the buttons. You can click on options to disable sound and music. To get started click on play.
+- When you click on play button you will be taken to a screen with instructions on how to play and make sure you enter your name and click on play button to get started.
 - How to play:
 - use the left arrow key on the keyboard to move the player movement to the left of the game scene.
 - use the right arrow key on the keyboard to move the player movement to the right of the game scene.
@@ -29,6 +30,13 @@
 - The warrior must be quick to fight the monsters so that he doesn't lose his healthbar.
 - The game is over if the warrior healthbar is empty.
 - If the game over it takes you to screen where you can add your scores to the leaderboard click on the button submit to add your name to the leaderboard.
+- [Play online here]( https://adventurerr.netlify.app)
+
+## Future Features
+- Add mobile friendliness.
+- Increase the complexity of the game.
+- Make it an MMORPG(an online role-playing video game in which multiple people participate simultaneously.) Game
+- Adjust the blocked layers on the tilemap.
 
 ## Built with
 - JavaScript
@@ -37,8 +45,20 @@
 - Tiled Map Editor
 - Babel
 - Es6
+- Netlify
+- Jest
 
-## Usage
+## Live Demo
+
+[Live Demo Link]( https://adventurerr.netlify.app)
+
+## How to Install
+
+> Follow the commands below
+- git clone
+- cd Adventurer
+- npm install
+- npm start
 
  - run npm start
 

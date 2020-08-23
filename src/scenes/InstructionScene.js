@@ -1,5 +1,6 @@
 import 'phaser';
 import Button from '../objects/Button';
+import Button2 from '../../assets/ui/blue_button02.png'
 
 export default class InstructionScene extends Phaser.Scene {
   constructor () {
@@ -43,7 +44,7 @@ this.text = this.add.text(300, 40, 'How to play😎', { fontSize: 40 });
     input.scaleX = 0.4;
     input.scaleY = 0.6;
 
-    const style = 'background: url(assets/ui/blue_button02.png); border: none; border-radius: 5px; color: #fff;';
+    const style = `background: url(${Button2}); border: none; border-radius: 5px; color: #fff;`;
     const gameButton = this.add.dom(590, 412, 'button', style, 'Play');
     gameButton.scaleX = 1.5;
     gameButton.scaleY = 1.7;

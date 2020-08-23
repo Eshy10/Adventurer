@@ -8,6 +8,7 @@ export default class UiScene extends Phaser.Scene {
     init() {
       // grab a reference to the game scene
       this.gameScene = this.scene.get('Game');
+      this.model = this.sys.game.globals.model;
     }
   
     create() {
@@ -26,6 +27,7 @@ export default class UiScene extends Phaser.Scene {
       // listen for the updateScore event from the game scene
       this.gameScene.events.on('updateScore', (score) => {
         this.scoreText.setText(`Coins: ${score}`);
+        this.sys.game.globals.model.score = score;
       });
     }
   }

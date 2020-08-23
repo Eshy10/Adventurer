@@ -100,10 +100,10 @@ export default class GameManager {
               // update the gold the player has
             //   this.players[playerId].updateGold(parseInt(-this.players[playerId].gold / 2), 10);
             //   this.scene.events.emit('updateScore', this.players[playerId].gold);
-            this.scene.start('gameOver');
-              // respawn the player
+            //   respawn the player
             //   this.players[playerId].respawn();
-            //   this.scene.events.emit('respawnPlayer', this.players[playerId]);
+              this.scene.events.emit('respawnPlayer', this.players[playerId])
+          
             }
           }
         }
@@ -113,7 +113,7 @@ export default class GameManager {
     setupSpawners() {
       const config = {
         spawnInterval: 1000,
-        limit: 20,
+        limit: 30,
         spawnerType: SpawnerType.CHEST,
         id: '',
       };
@@ -178,4 +178,5 @@ export default class GameManager {
     moveMonsters() {
       this.scene.events.emit('monsterMovement', this.monsters);
     }
+
   }

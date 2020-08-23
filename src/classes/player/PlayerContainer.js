@@ -67,11 +67,17 @@ const Direction = {
       this.updateHealthBar();
     }
   
-    respawn(playerObject) {
-      this.health = playerObject.health;
-      this.setPosition(playerObject.x, playerObject.y);
-      this.updateHealthBar();
-    }
+  
+    // respawn() {
+    //     this.scene.time.addEvent({
+    //       callback() {
+    //         this.scene.scene.stop('Ui');
+    //         this.scene.scene.start('GameOver');
+    //       },
+    //       callbackScope: this,
+    //       loop: false,
+    //     });
+    //   }
   
     update(cursors) {
       this.body.setVelocity(0);

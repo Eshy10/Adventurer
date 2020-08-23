@@ -1,8 +1,8 @@
 import Phaser from 'phaser';
 import Button from '../objects/Button';
-import { submitScores } from '../objects/Api';
+import Api  from '../objects/Api';
 
-export default class DisplayScoreScene extends Phaser.Scene {
+export default class LeaderBoardScene extends Phaser.Scene {
   constructor() {
     super('Score');
   }
@@ -19,7 +19,7 @@ image.setScale(scale).setScrollFactor(0)
       fontSize: '32px ',
     }).setOrigin(0.5, 0.5);
 
-    submitScores().then((scores) => {
+    Api.fetchScores().then((scores) => {
       const scoreStyle = {
         color: 'white',
         fontSize: '38px ',

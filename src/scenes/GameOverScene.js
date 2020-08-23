@@ -1,11 +1,11 @@
 import Phaser from 'phaser';
-import Button from '../Objects/Button';
-import config from '../Config/config';
-import { submitScores } from '../objects/Api';
+import Button from '../objects/Button';
+import config from '../config/config';
+import Api  from '../objects/Api';
 
 export default class GameOverScene extends Phaser.Scene {
   constructor() {
-    super({ key: 'gameOver' });
+    super({ key: 'GameOver' });
   }
 
   init() {
@@ -18,7 +18,26 @@ export default class GameOverScene extends Phaser.Scene {
   }
 
   create() {
-    const user = this.sys.game.globals.model.userName;
+    // const user = this.sys.game.globals.model.userName;
+
+    this.playerName = this.add.text(215, 400, 'Enter your name: ', { fontSize: 20, fontFamily: 'monospace' });
+    const input = this.add.dom(480, 412, 'input', {
+        type: 'text',
+        name: 'nameField',
+        fontSize: '32px',
+        backgroundColor: '#fff',
+      });
+      input.scaleX = 0.4;
+      input.scaleY = 0.6;
+  
+  
+        if (input.node.value) {
+          this.model = this.sys.game.globals.model;
+          this.model.userName = input.node.value;
+        }else {
+            return
+        }
+      
     // Background
     let image = this.add.image(this.cameras.main.width / 2, this.cameras.main.height / 2, 'bgImage')
     let scaleX = this.cameras.main.width / image.width
@@ -26,7 +45,7 @@ export default class GameOverScene extends Phaser.Scene {
     let scale = Math.max(scaleX, scaleY)
 
     this.score = this.add.text(230, 30,
-      `Hello ${user}, your score is: ${this.sys.game.globals.model.score}`, {
+      `Game over😩, Your score is: ${this.sys.game.globals.model.score}`, {
         fontFamily: 'monospace',
         fontSize: 20,
         fontStyle: 'bold',
@@ -34,7 +53,7 @@ export default class GameOverScene extends Phaser.Scene {
         align: 'center',
       });
 
-      submitScores(this.model.userName, this.model.score);
+      Api.submitScores(this.model.userName, this.model.score);
 
     this.gameButton = new Button(this, 400, (config.height / 2) + 170,
       'blueButton1', 'blueButton2', 'Submit', 'Score');

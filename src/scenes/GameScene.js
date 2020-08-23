@@ -187,7 +187,9 @@ export default class GameScene extends Phaser.Scene {
 
     this.events.on('respawnPlayer', (playerObject) => {
       this.playerDeathAudio.play();
-      this.player.respawn(playerObject);
+      // this.player.respawn(playerObject);
+      this.scene.switch('GameOver')
+      this.scene.stop('Ui')
     });
 
     this.gameManager = new GameManager(this, this.map.map.objects);

@@ -17,16 +17,27 @@ export default class GameOverScene extends Phaser.Scene {
   }
 
   create() {
-    // Background
+   
     let image = this.add.image(this.cameras.main.width / 2, this.cameras.main.height / 2, 'bgImage')
     let scaleX = this.cameras.main.width / image.width
     let scaleY = this.cameras.main.height / image.height
     let scale = Math.max(scaleX, scaleY)
+    image.setScale(scale).setScrollFactor(0)
+
+    this.gameImage = this.add.image(300, 220, 'characters', 5);
+    this.gameImage.setScale(5);
+
+    this.gameImage = this.add.image(550, 220, 'monsters', 7);
+    this.gameImage.setScale(5)
+
+
+    this.gameImage = this.add.image(850, 220, 'monsters', 1);
+    this.gameImage.setScale(5)
 
     const user = this.sys.game.globals.model.userName;
 
-    this.score = this.add.text(230, 30,
-      `Game over😩 ${user}, Your score is: ${this.sys.game.globals.model.score}`, {
+    this.score = this.add.text(230, 50,
+      `Game over 😩 ${user}, Your score is: ${this.sys.game.globals.model.score}`, {
         fontFamily: 'monospace',
         fontSize: 20,
         fontStyle: 'bold',
@@ -36,7 +47,17 @@ export default class GameOverScene extends Phaser.Scene {
 
       Api.submitScores(this.model.userName, this.model.score);
 
-    this.gameButton = new Button(this, 400, (config.height / 2) + 170,
+      this.gameText = this.add.text(230, 100,
+        'Click on the button below to add your score to the score board', {
+          fontFamily: 'monospace',
+          fontSize: 20,
+          fontStyle: 'bold',
+          color: '#ffffff',
+          align: 'center',
+        });
+  
+
+    this.gameButton = new Button(this, 600, 370,
       'blueButton1', 'blueButton2', 'Submit', 'Score');
   }
 }

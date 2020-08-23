@@ -8,17 +8,17 @@ export default class Monster extends Phaser.Physics.Arcade.Image {
       this.health = health;
       this.maxHealth = maxHealth;
   
-      // enable physics
+     
       this.scene.physics.world.enable(this);
-      // set immovable if another object collides with our monster
+
       this.setImmovable(false);
-      // scale our monster
+   
       this.setScale(2);
-      // collide with world bounds
+      
       this.setCollideWorldBounds(true);
-      // add the monster to our existing scene
+    
       this.scene.add.existing(this);
-      // update the origin
+    
       this.setOrigin(0);
   
       this.createHealthBar();

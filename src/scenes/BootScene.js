@@ -30,7 +30,7 @@ export default class BootScene extends Phaser.Scene {
   }
 
   loadTileMap() {
-    // map made with Tiled in JSON format
+
     this.load.tilemapTiledJSON('map', jsonMap);
   }
  

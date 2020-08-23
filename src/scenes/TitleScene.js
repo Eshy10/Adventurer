@@ -8,7 +8,7 @@ export default class TitleScene extends Phaser.Scene {
   }
  
   create () {
-// Background
+
 let image = this.add.image(this.cameras.main.width / 2, this.cameras.main.height / 2, 'bgImage')
 let scaleX = this.cameras.main.width / image.width
 let scaleY = this.cameras.main.height / image.height
@@ -16,13 +16,11 @@ let scale = Math.max(scaleX, scaleY)
 image.setScale(scale).setScrollFactor(0)
 
 
-// Game
+
 this.gameButton = new Button(this, config.width/2, config.height/2 - 100, 'blueButton1', 'blueButton2', 'Play', 'Instructions');
  
-// Options
 this.optionsButton = new Button(this, config.width/2, config.height/2, 'blueButton1', 'blueButton2', 'Options', 'Options');
 
-// Credits
 this.creditsButton = new Button(this, config.width/2, config.height/2 + 100, 'blueButton1', 'blueButton2', 'Credits', 'Credits');
 
 

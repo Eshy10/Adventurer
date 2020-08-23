@@ -11,8 +11,8 @@ const Direction = {
   export default class PlayerContainer extends Phaser.GameObjects.Container {
     constructor(scene, x, y, key, frame, health, maxHealth, id, attackAudio) {
       super(scene, x, y);
-      this.scene = scene; // the scene this container will be added to
-      this.velocity = 160; // the velocity when moving our player
+      this.scene = scene; 
+      this.velocity = 160; 
       this.currentDirection = Direction.RIGHT;
       this.playerAttacking = false;
       this.flipX = true;
@@ -22,22 +22,22 @@ const Direction = {
       this.id = id;
       this.attackAudio = attackAudio;
   
-      // set a size on the container
+  
       this.setSize(64, 64);
-      // enable physics
+   
       this.scene.physics.world.enable(this);
-      // collide with world bounds
+    
       this.body.setCollideWorldBounds(true);
-      // add the player container to our existing scene
+    
       this.scene.add.existing(this);
-      // have the camera follow the player
+
       this.scene.cameras.main.startFollow(this);
   
-      // create the player
+      
       this.player = new Player(this.scene, 0, 0, key, frame);
       this.add(this.player);
   
-      // create the weapon game object
+ 
       this.weapon = this.scene.add.image(40, 0, 'items', 4);
       this.scene.add.existing(this.weapon);
       this.weapon.setScale(1.5);
@@ -45,7 +45,7 @@ const Direction = {
       this.add(this.weapon);
       this.weapon.alpha = 0;
   
-      // create the player healthbar
+     
       this.createHealthBar();
     }
   
@@ -67,17 +67,6 @@ const Direction = {
       this.updateHealthBar();
     }
   
-  
-    // respawn() {
-    //     this.scene.time.addEvent({
-    //       callback() {
-    //         this.scene.scene.stop('Ui');
-    //         this.scene.scene.start('GameOver');
-    //       },
-    //       callbackScope: this,
-    //       loop: false,
-    //     });
-    //   }
   
     update(cursors) {
       this.body.setVelocity(0);

@@ -19,18 +19,20 @@ image.setScale(scale).setScrollFactor(0)
       fontSize: '32px ',
     }).setOrigin(0.5, 0.5);
 
-    Api.fetchScores().then((scores) => {
+    Api.fetchScores().then((data) => {
+        const { result } = data
       const scoreStyle = {
         color: 'white',
         fontSize: '38px ',
       };
+      console.log(result)
 
-      scores.sort((x, y) => y.score - x.score);
+      result.sort((x, y) => y.score - x.score);
       const space = 40;
-      for (let i = 0; i < 5; i += 1) {
-        if (scores[i] !== undefined) {
+      for (let i = 0; i < 10; i += 1) {
+        if (result[i] !== undefined) {
           this.add.text(60, 200 + (space * i),
-            `${i + 1}. Name: ${scores[i].user} -- Score: ${scores[i].score}`,
+            `${i + 1}. Name: ${result[i].user} -- Score: ${result[i].score}`,
             scoreStyle);
         }
       }
@@ -41,7 +43,7 @@ image.setScale(scale).setScrollFactor(0)
     this.menuButton.on('pointerdown', () => {
       this.model = this.sys.game.globals.model;
       this.model.score = 0;
-      this.scene.start('Game');
+      this.scene.start('Instructions');
     });
   }
 }

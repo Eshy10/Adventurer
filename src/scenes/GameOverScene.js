@@ -14,38 +14,19 @@ export default class GameOverScene extends Phaser.Scene {
   }
 
   preload() {
-    this.load.image('gameOverTitle', 'assets/ui/blue_button02.png');
   }
 
   create() {
-    // const user = this.sys.game.globals.model.userName;
-
-    this.playerName = this.add.text(215, 400, 'Enter your name: ', { fontSize: 20, fontFamily: 'monospace' });
-    const input = this.add.dom(480, 412, 'input', {
-        type: 'text',
-        name: 'nameField',
-        fontSize: '32px',
-        backgroundColor: '#fff',
-      });
-      input.scaleX = 0.4;
-      input.scaleY = 0.6;
-  
-  
-        if (input.node.value) {
-          this.model = this.sys.game.globals.model;
-          this.model.userName = input.node.value;
-        }else {
-            return
-        }
-      
     // Background
     let image = this.add.image(this.cameras.main.width / 2, this.cameras.main.height / 2, 'bgImage')
     let scaleX = this.cameras.main.width / image.width
     let scaleY = this.cameras.main.height / image.height
     let scale = Math.max(scaleX, scaleY)
 
+    const user = this.sys.game.globals.model.userName;
+
     this.score = this.add.text(230, 30,
-      `Game over😩, Your score is: ${this.sys.game.globals.model.score}`, {
+      `Game over😩 ${user}, Your score is: ${this.sys.game.globals.model.score}`, {
         fontFamily: 'monospace',
         fontSize: 20,
         fontStyle: 'bold',

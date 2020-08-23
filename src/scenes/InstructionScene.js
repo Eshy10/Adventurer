@@ -29,7 +29,6 @@ this.text = this.add.text(300, 40, 'How to play😎', { fontSize: 40 });
     this.downButton = new Button(this, 300, 300, 'blueButton1', 'blueButton2', '⬇️');
     this.downText = this.add.text(400, 280, 'Move the player down', { fontSize: 24 });
 
-    // this.startButton = new Button(this, 600, 500, 'blueButton1', 'blueButton2', 'Start', 'Game')
     
     this.menuButton = new Button(this, 400, 500, 'blueButton1', 'blueButton2', 'Menu', 'Title');
 

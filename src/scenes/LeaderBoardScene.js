@@ -1,6 +1,7 @@
 import Phaser from 'phaser';
 import Button from '../objects/Button';
 import Api from '../objects/Api';
+/* eslint-disable no-undef */
 
 export default class LeaderBoardScene extends Phaser.Scene {
   constructor() {

@@ -9,6 +9,7 @@ import EnemyDeath from '../../assets/audio/EnemyDeath.wav';
 import playerAttack from '../../assets/audio/PlayerAttack.wav';
 import playerDamage from '../../assets/audio/PlayerDamage.wav';
 import playerDeath from '../../assets/audio/PlayerDeath.wav';
+/* eslint-disable no-undef */
 
 const jsonMap = require('../../assets/level/forestland.json');
 

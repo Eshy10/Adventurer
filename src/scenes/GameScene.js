@@ -4,6 +4,7 @@ import Chest from '../classes/Chest';
 import Monster from '../classes/Monster';
 import Map from '../classes/Map';
 import GameManager from '../gameManager/GameManger';
+/* eslint-disable no-undef */
 
 export default class GameScene extends Phaser.Scene {
   constructor() {
@@ -181,7 +182,7 @@ export default class GameScene extends Phaser.Scene {
       this.player.updateHealth(health);
     });
 
-    this.events.on('respawnPlayer', (playerObject) => {
+    this.events.on('respawnPlayer', () => {
       this.playerDeathAudio.play();
 
       this.scene.switch('GameOver');

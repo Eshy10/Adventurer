@@ -1,5 +1,6 @@
 import 'phaser';
 import Button from '../objects/Button';
+/* eslint-disable no-undef */
 
 export default class OptionsScene extends Phaser.Scene {
   constructor() {

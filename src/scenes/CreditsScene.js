@@ -1,13 +1,14 @@
 import 'phaser';
 import config from '../config/config';
 
+
 export default class CreditsScene extends Phaser.Scene {
   constructor() {
     super('Credits');
   }
 
+
   create() {
-    // Background
     const image = this.add.image(this.cameras.main.width / 2, this.cameras.main.height / 2, 'bgImage');
     const scaleX = this.cameras.main.width / image.width;
     const scaleY = this.cameras.main.height / image.height;

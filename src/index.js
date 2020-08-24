@@ -11,6 +11,7 @@ import LeaderBoardScene from './scenes/LeaderBoardScene';
 import UiScene from './scenes/UiScene';
 import Model from './classes/Model';
 import GameOverScene from './scenes/GameOverScene';
+/* eslint-disable no-undef */
 
 class Game extends Phaser.Game {
   constructor() {

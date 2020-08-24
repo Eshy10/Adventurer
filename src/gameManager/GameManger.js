@@ -79,7 +79,7 @@ export default class GameManager {
           this.players[playerId].updateHealth(2);
           this.scene.events.emit('updatePlayerHealth', playerId, this.players[playerId].health);
         } else {
-          this.players[playerId].updateHealth(-attack);
+          this.players[playerId].updateHealth(-attack * 3);
           this.scene.events.emit('updatePlayerHealth', playerId, this.players[playerId].health);
 
           this.scene.events.emit('updateMonsterHealth', monsterId, this.monsters[monsterId].health);

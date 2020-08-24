@@ -1,6 +1,7 @@
 import 'phaser';
 import Button from '../objects/Button';
 import Button2 from '../../assets/ui/blue_button02.png';
+/* eslint-disable no-undef */
 
 export default class InstructionScene extends Phaser.Scene {
   constructor() {

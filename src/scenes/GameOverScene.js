@@ -1,7 +1,7 @@
 import Phaser from 'phaser';
 import Button from '../objects/Button';
-import config from '../config/config';
 import Api from '../objects/Api';
+/* eslint-disable no-undef */
 
 export default class GameOverScene extends Phaser.Scene {
   constructor() {
@@ -11,9 +11,6 @@ export default class GameOverScene extends Phaser.Scene {
   init() {
     this.model = this.sys.game.globals.model;
     this.gameScene = this.scene.get('Game');
-  }
-
-  preload() {
   }
 
   create() {

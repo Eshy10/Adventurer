@@ -24,6 +24,7 @@ export default class Map {
     this.scene.physics.world.bounds.width = this.map.widthInPixels * 2;
     this.scene.physics.world.bounds.height = this.map.heightInPixels * 2;
 
-    this.scene.cameras.main.setBounds(0, 0, this.map.widthInPixels * 2, this.map.heightInPixels * 2);
+    this.scene.cameras.main.setBounds(0, 0, this.map.widthInPixels * 2,
+      this.map.heightInPixels * 2);
   }
 }

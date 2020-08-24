@@ -10,15 +10,14 @@ import playerAttack from '../../assets/audio/PlayerAttack.wav';
 import playerDamage from '../../assets/audio/PlayerDamage.wav';
 import playerDeath from '../../assets/audio/PlayerDeath.wav';
 
-
 const jsonMap = require('../../assets/level/forestland.json');
- 
+
 export default class BootScene extends Phaser.Scene {
-  constructor () {
+  constructor() {
     super('Boot');
   }
- 
-  preload () {
+
+  preload() {
     this.load.image('logo', logoImage);
     this.load.image('background', backgroundTiled);
     this.loadSpriteSheets();
@@ -41,11 +40,10 @@ export default class BootScene extends Phaser.Scene {
   }
 
   loadTileMap() {
-
     this.load.tilemapTiledJSON('map', jsonMap);
   }
- 
-  create () {
+
+  create() {
     this.scene.start('Preloader');
   }
-};
+}

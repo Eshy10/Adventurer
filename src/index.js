@@ -12,10 +12,8 @@ import UiScene from './scenes/UiScene';
 import Model from './classes/Model';
 import GameOverScene from './scenes/GameOverScene';
 
- 
-
 class Game extends Phaser.Game {
-  constructor () {
+  constructor() {
     super(config);
     const model = new Model();
     this.globals = { model, bgMusic: null };
@@ -31,7 +29,6 @@ class Game extends Phaser.Game {
     this.scene.add('Ui', UiScene);
     this.scene.start('Boot');
   }
-
 }
 
 window.game = new Game();

@@ -19,10 +19,9 @@ test('Score must not be 0', () => {
     })
     .catch((error) => error);
 });
-  
-  test('should send an object to the API', () => {
-    API.submitScores().then(data => {
-      expect(typeof data).toBe('object');
-    }).catch(() => { });
-  });
 
+test('should send an object to the API', () => {
+  API.submitScores().then(data => {
+    expect(typeof data).toBe('object');
+  }).catch(() => { });
+});

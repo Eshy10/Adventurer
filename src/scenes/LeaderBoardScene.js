@@ -1,6 +1,6 @@
 import Phaser from 'phaser';
 import Button from '../objects/Button';
-import Api  from '../objects/Api';
+import Api from '../objects/Api';
 
 export default class LeaderBoardScene extends Phaser.Scene {
   constructor() {
@@ -8,24 +8,22 @@ export default class LeaderBoardScene extends Phaser.Scene {
   }
 
   create() {
-
-let image = this.add.image(this.cameras.main.width / 2, this.cameras.main.height / 2, 'bgImage')
-let scaleX = this.cameras.main.width / image.width
-let scaleY = this.cameras.main.height / image.height
-let scale = Math.max(scaleX, scaleY)
-image.setScale(scale).setScrollFactor(0)
+    const image = this.add.image(this.cameras.main.width / 2, this.cameras.main.height / 2, 'bgImage');
+    const scaleX = this.cameras.main.width / image.width;
+    const scaleY = this.cameras.main.height / image.height;
+    const scale = Math.max(scaleX, scaleY);
+    image.setScale(scale).setScrollFactor(0);
     this.add.text(400, 100, 'LeaderBoard 🏆', {
       color: 'white',
       fontSize: '32px ',
     }).setOrigin(0.5, 0.5);
 
     Api.fetchScores().then((data) => {
-        const { result } = data
+      const { result } = data;
       const scoreStyle = {
         color: 'white',
         fontSize: '38px ',
       };
-
 
       result.sort((x, y) => y.score - x.score);
       const space = 40;

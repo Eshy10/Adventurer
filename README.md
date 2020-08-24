@@ -30,7 +30,7 @@
 - The warrior must be quick to fight the monsters so that he doesn't lose his healthbar.
 - The game is over if the warrior healthbar is empty.
 - If the game over it takes you to screen where you can add your scores to the leaderboard click on the button submit to add your name to the leaderboard.
-- [Play online here]( https://adventurerr.netlify.app)
+- [Play online here](  https://adventurerr.netlify.app)
 
 ## Future Features
 - Add mobile friendliness.
@@ -82,9 +82,11 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+- [Phaser ]( https://phaser.io/)
+- [ Openweathermap ]( https://adventurerr.netlify.app) image assets
+- [Zenva Academy]( https://academy.zenva.com/?zva_src=https://gamedevacademy.org) rpg game tutorial
+- [Craftpix ]( https://craftpix.net/) Background Image
+
 
 ## 📝 License
 

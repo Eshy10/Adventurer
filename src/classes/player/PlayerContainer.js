@@ -12,7 +12,7 @@ export default class PlayerContainer extends Phaser.GameObjects.Container {
   constructor(scene, x, y, key, frame, health, maxHealth, id, attackAudio) {
     super(scene, x, y);
     this.scene = scene;
-    this.velocity = 160;
+    this.velocity = 200;
     this.currentDirection = Direction.RIGHT;
     this.playerAttacking = false;
     this.flipX = true;

@@ -26,7 +26,7 @@
 - use the down arrow key on the keyboard to move the player movement to down of the game scene.
 - use the lspacebar key on the keyboard to fight the monsters with your weapon which is a sword. 
 - The warrior must collect the treasure box to get more gold.
-- The warrior get more health bar and gold by fighting the monsters with his sword. The sword can be gotten by pressing the spacebar of your keyboard.
+- The warrior get more health bar and gold by fighting the monsters with his sword. The sword can be gotten by pressing the spacebar key on your keyboard.
 - The warrior must be quick to fight the monsters so that he doesn't lose his healthbar.
 - The game is over if the warrior healthbar is empty.
 - If the game over it takes you to screen where you can add your scores to the leaderboard click on the button submit to add your name to the leaderboard.
